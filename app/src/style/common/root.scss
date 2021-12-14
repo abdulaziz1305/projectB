@@ -1,0 +1,29 @@
+$Inter: ('Bold', 700), ('SemiBold', 500), ('Regular', 400);
+
+@each $name, $weight in $Inter {
+    @font-face {
+        font-family: 'Inter';
+        src: url(../fonts/Inter/Inter-#{$name}.woff2);
+        font-weight: $weight;
+    }
+}
+
+$Rubik: ('Bold', 700), ('Light', 300), ('ExtraLight', 200), ('SemiBold', 600);
+
+@each $name, $weight in $Rubik {
+    @font-face {
+        font-family: 'Rubik';
+        src: url(../fonts/Rubik/Rubik-#{$name}.woff2);
+        font-weight: $weight;
+    }
+}
+$Muller: ('Bold', 700), ('Light', 300), ('ExtraBold', 800), ('Thin', 100), ('UltraLight', 250),('Regular', 400);
+
+@each $name, $weight in $Muller {
+    @font-face {
+        font-family: 'Muller';
+        src: url(../fonts/Muller/Muller#{$name}.woff2);
+        font-weight: $weight;
+    }
+}
+

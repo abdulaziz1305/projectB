@@ -1,0 +1,37 @@
+$xxl: 1678px;
+$xl:1320px;
+$lg:1140px;
+$md:992px;
+$sm:768px;
+$xs:576px;
+
+@mixin container(){
+    max-width: $xxl;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 12px;
+    
+    @include media($xxl){
+        max-width: $xl;
+    }
+    @include media($xl){
+        max-width: $lg;
+    }
+    @include media($lg){
+        max-width: $md;
+    }
+    @include media($md){
+        max-width: $sm;
+    }
+    @include media($sm){
+        max-width: $xs;
+    }
+    @include media($xs){
+        max-width: 100%;
+    }
+}
+@mixin media($size:$xxl){
+    @media(max-width:$size) {
+        @content;
+    }
+}
